@@ -50,9 +50,9 @@ double bench_duration(bench *b) {
 }
 
 void bench_print_summary(bench *b) {
-    printf("%s -> %ld runs, %ld iterations each run, finished in %lf seconds\n", BENCH_PRIMARY_COLOR, b->R, b->N, bench_duration(b) );
-    printf("%s -> %.2f i/sec\n", BENCH_PRIMARY_COLOR, bench_iteration_speed(b) );
-    printf("%s", BENCH_RESET_COLOR);
+    printf("%s -> %s%ld%s runs, %s%ld%s iterations each run, finished in %s%lf%s seconds\n", BENCH_PRIMARY_COLOR, BENCH_SECONDARY_COLOR, b->R, BENCH_PRIMARY_COLOR, BENCH_SECONDARY_COLOR, b->N, BENCH_PRIMARY_COLOR, BENCH_SECONDARY_COLOR, bench_duration(b), BENCH_PRIMARY_COLOR );
+    printf("%s -> %s%.2f%s i/sec\n", BENCH_PRIMARY_COLOR, BENCH_SECONDARY_COLOR, bench_iteration_speed(b), BENCH_PRIMARY_COLOR );
+    printf("%s\n", BENCH_RESET_COLOR);
 }
 
 void bench_csv_write(char *filename, int countOfB, ...) {

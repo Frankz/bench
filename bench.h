@@ -45,7 +45,7 @@ void bench_csv_write(char *filename, int countOfB, ...);
 
 #define MEASURE(B) \
         bench B; B.N = 1; B.R = 1; \
-        printf("%s -> Measuring " #B "...\n", BENCH_PRIMARY_COLOR); \
+        printf("\n%s -> Measuring %s" #B "%s...\n", BENCH_PRIMARY_COLOR, BENCH_SECONDARY_COLOR, BENCH_PRIMARY_COLOR); \
         bench_start(&B);
 
 #define END_MEASURE(B) \
@@ -57,7 +57,7 @@ void bench_csv_write(char *filename, int countOfB, ...);
         bench B; \
         B.N = 100000; \
         B.R = RUN; \
-        printf("%s -> Benchmarking " #B "...\n", BENCH_PRIMARY_COLOR); \
+        printf("\n%s -> Benchmarking %s" #B "%s...\n", BENCH_PRIMARY_COLOR, BENCH_SECONDARY_COLOR, BENCH_PRIMARY_COLOR); \
         bench_start(&B); \
         for (int r_##B = 0; r_##B < B.R ; r_##B++ ) { \
             for (int i_##B = 0; i_##B < B.N ; i_##B++ ) {
