@@ -4,7 +4,7 @@ bench
 > Bench is a C benchmarking utility. Forked from [c9s/bench](https://github.com/c9s/bench).
 
 #### Usage
-It is a pretty basic library - also uses a lot of macros - so a stockpile of documentation isn't necessary. This example is easy enough to follow and learn from.
+Here is an example. You can view a full example [here](./example.c).
 ```c
 #include "bench.c"
 #include <math.h> // For the purposes of our example
@@ -12,7 +12,7 @@ It is a pretty basic library - also uses a lot of macros - so a stockpile of doc
 void example_benchmark() {
     BENCHMARK(example_bench, 3)
 
-    int i = sqrt(394232417);
+   	// All the code you want to benchmark
 
     END_BENCHMARK(example_bench)
     BENCHMARK_SUMMARY(example_bench);
@@ -21,7 +21,7 @@ void example_benchmark() {
 void example_measure() {
     MEASURE(example_measure)
 
-    int i = sqrt(394232417);
+   	// All the code you want to measure
 
     END_MEASURE(example_measure)
     MEASURE_SUMMARY(example_measure);
