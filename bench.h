@@ -51,6 +51,8 @@ void bench_csv_write(char *filename, int countOfB, ...);
 #define END_MEASURE(B) \
         bench_stop(&B);
 
+#define MEASURE_SUMMARY(B) bench_print_summary(&B);
+
 #define BENCHMARK(B, RUN) \
         bench B; \
         B.N = 100000; \

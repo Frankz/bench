@@ -51,9 +51,6 @@ double bench_duration(bench *b) {
 
 void bench_print_summary(bench *b) {
     printf("%s -> %ld runs, %ld iterations each run, finished in %lf seconds\n", BENCH_PRIMARY_COLOR, b->R, b->N, bench_duration(b) );
-    //printf("bench :: %ld runs, ", b->R);
-    //printf("bench :: %ld iterations each run, ", b->N);
-    //printf("bench :: finished in %lf seconds\n", bench_duration(b) );
     printf("%s -> %.2f i/sec\n", BENCH_PRIMARY_COLOR, bench_iteration_speed(b) );
     printf("%s", BENCH_RESET_COLOR);
 }
