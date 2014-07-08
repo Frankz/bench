@@ -1,7 +1,7 @@
 bench
 =====
 
-> Bench is a C benchmarking utility. Forked from [https://github.com/c9s/bench](c9s/bench).
+> Bench is a C benchmarking utility. Forked from [c9s/bench](https://github.com/c9s/bench).
 
 #### Usage
 It is a pretty basic library - also uses a lot of macros - so a stockpile of documentation isn't necessary. This example is easy enough to follow and learn from.
