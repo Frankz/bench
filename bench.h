@@ -53,8 +53,8 @@ void bench_csv_write(char *filename, int countOfB, ...);
         B.R = RUN; \
         printf("Benchmarking " #B "...\n"); \
         bench_start(&B); \
-        for (int ##_r = 0; ##_r < B.R ; ##_r++ ) { \
-            for (int ##_i = 0; ##_i < B.N ; ##_i++ ) {
+        for (int r_##B = 0; r_##B < B.R ; r_##B++ ) { \
+            for (int i_##B = 0; i_##B < B.N ; i_##B++ ) {
 
 #define END_BENCHMARK(B) \
             } \
