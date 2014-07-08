@@ -7,6 +7,10 @@
 #ifndef BENCH_H
 #define BENCH_H
 
+#define BENCH_RESET_COLOR "\e[m"
+#define BENCH_PRIMARY_COLOR "\e[36m"
+#define BENCH_SECONDARY_COLOR "\e[33m"
+
 #include <stdlib.h>
 
 #define MICRO_IN_SEC 1000000.00
@@ -41,7 +45,7 @@ void bench_csv_write(char *filename, int countOfB, ...);
 
 #define MEASURE(B) \
         bench B; B.N = 1; B.R = 1; \
-        printf("Measuring " #B "...\n"); \
+        printf("%s -> Measuring " #B "...\n", BENCH_PRIMARY_COLOR); \
         bench_start(&B);
 
 #define END_MEASURE(B) \
@@ -51,7 +55,7 @@ void bench_csv_write(char *filename, int countOfB, ...);
         bench B; \
         B.N = 100000; \
         B.R = RUN; \
-        printf("Benchmarking " #B "...\n"); \
+        printf("%s -> Benchmarking " #B "...\n", BENCH_PRIMARY_COLOR); \
         bench_start(&B); \
         for (int r_##B = 0; r_##B < B.R ; r_##B++ ) { \
             for (int i_##B = 0; i_##B < B.N ; i_##B++ ) {
