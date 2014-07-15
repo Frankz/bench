@@ -3,6 +3,8 @@ bench
 
 > Bench is a C benchmarking utility. Forked from [c9s/bench](https://github.com/c9s/bench).
 
+![Bench Screenshot](./screenshot.png)
+
 #### Usage
 Here is an example. You can view a full example [here](./example.c).
 ```c
