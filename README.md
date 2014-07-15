@@ -9,7 +9,6 @@ bench
 Here is an example. You can view a full example [here](./example.c).
 ```c
 #include "bench.c"
-#include <math.h> // For the purposes of our example
 
 void example_benchmark() {
     BENCHMARK(example_bench, 3)
